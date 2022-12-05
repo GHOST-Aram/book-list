@@ -10,9 +10,19 @@
     --danger-color:red;
     --grey-color:rgb(168, 167, 167);
 }
+
 body{
     padding-block-start: 100px;
     background: linear-gradient(45deg, red, green 40%, blue);
+}
+#back-to-top{
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    /* color: rgb(24, 104, 179); */
+}
+#back-to-top i{
+    font-size: 1.5rem;
 }
 .bg-grey{
     background-color: var(--grey-color);
@@ -24,6 +34,7 @@ body{
     width: 80%;
     margin: auto;
 }
+
 .flex{
     display: flex;
 }
@@ -43,8 +54,7 @@ footer{
     text-align: center;
     color: gray;
     padding-top: 1rem;
-
-
+    position: relative;
 }
 footer a{
     text-decoration: none;
@@ -85,6 +95,7 @@ input[type=text],select{
     color: white;
     border-bottom: solid 1px grey;
 }
+button,
 input,select{
     border-radius: 4px;
     border: none;
@@ -101,11 +112,11 @@ input[type=submit],select{
 input[type=submit]:hover{
     cursor: pointer;
 }
-
+button:hover,
 input:hover,select:hover{
     box-shadow: 0 0 28px white;
 }
-
+button:focus,
 input:focus,select:focus{
     box-shadow: 0 0 24px var(--primary-color);
     outline: none;
@@ -117,6 +128,7 @@ input::placeholder{
 label{
     color: var(--primary-color);
 }
+
 .p-1{
     padding-block: .5rem;
 }

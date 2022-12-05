@@ -63,6 +63,7 @@ function renderRow(row){
     const table = document.querySelector('tbody')
     table.appendChild(row)
 }
+
 //Add Book to books array
 //Update local storage
 function updateBooks(book){
@@ -103,3 +104,6 @@ form.addEventListener('submit', (event)=>{
     const row = createRow(book, index)
     renderRow(row)
 })
+
+
+
