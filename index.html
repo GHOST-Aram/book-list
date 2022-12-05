@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
+            integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" 
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Book List</title>
+</head>
+<body>
+    <header class="bg-grey p-block-1">
+        <div class="logo text-center">
+            <h1 class="font-lg fw-500">
+                <i class="fa-solid fa-book-open text-primary"></i>
+                My<span class="text-primary">Book</span>List
+            </h1>
+        </div>
+    </header>
+    <section class="input-section">
+        <div class="container p-block-1">
+            <form action="" method="post" class="flex p-block-1">
+                <label for="title">Title</label>
+                <input type="text" placeholder="Enter book title" name="book-title" 
+                id="book-title" class="p-1">
+            
+                <label for="author-name">Author</label>
+                <input type="text" placeholder="Enter book author" name="author-name" 
+                    id="author-name" class="p-1">
+    
+                <label for="isbn">#ISBN</label>
+                <input type="text" placeholder="Enter ISBN number" name="isbn" id="isbn" class="p-1" >
+                <label for="type">Document Type</label>
+                <select name="document-type" id="book-type" class="p-1">
+                    <option value="">--Select document type</option>
+                    <option value="paperback">Paperback</option>
+                    <option value="hardcover">Hardcover</option>
+                    <option value="pdf">PDF</option>
+                    <option value="ebook">E-book</option>
+                </select>
+                <input type="submit" value="Add to List" class="bg-primary p-1">
+            </form>
+            <hr>
+            <div class="table-section p-block-1">
+                <table>
+                    <colgroup>
+                        <col id="col-1">
+                        <col id="col-2">
+                        <col id="col-3">
+                        <col id="col-4">
+                    </colgroup>
+                    <thead>
+                        <th scope="col">#</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Author</th>
+                        <th scope="col">#ISBN</th>
+                        <th scope="col">Doc. Type</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td>How to win friends and influence people</td>
+                            <td>Dale Carnegie</td>
+                            <td>1342534634</td>
+                            <td>Paperback</td>
+                        </tr>
+                        <tr>
+                            <th>2</th>
+                            <td>Rich Dad Poor Dad</td>
+                            <td>Robert Kiyosaki</td>
+                            <td>4635725238</td>
+                            <td>Paperback</td>
+                        </tr>
+                        <tr>
+                            <th>3</th>
+                            <td>Richest Man In Babylon</td>
+                            <td>george l clason</td>
+                            <td>4535656776</td>
+                            <td>HardCover</td>
+                        </tr>
+                        <tr>
+                            <th>4</th>
+                            <td>Think and grow rich</td>
+                            <td>Napolleon Hill</td>
+                            <td>2357465768</td>
+                            <td>e-book</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
