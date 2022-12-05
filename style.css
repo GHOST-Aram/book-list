@@ -38,6 +38,30 @@ form{
     justify-content: flex-start;
     align-items: flex-start;
 }
+footer{
+    background-color: rgba(0,0,0,0.9);
+    text-align: center;
+    color: gray;
+    padding-top: 1rem;
+
+
+}
+footer a{
+    text-decoration: none;
+    color: gray;
+    margin: 1rem;
+}
+footer i{
+    font-size: 1rem;
+    padding: 10px;
+    transition: all .25s;
+}
+footer i:hover{
+    color: var(--primary-color);
+}
+footer p{
+    font-size: 12px;
+}
 .fw-500{
     font-weight: 500;
 }
@@ -52,6 +76,7 @@ input{
     width: 94%;
     margin: auto;
     padding-inline: .4rem;
+    transition: all .25s;
 }
 
 input[type=text],select{
