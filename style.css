@@ -111,8 +111,7 @@ select option{
 colgroup #col-1{
     width: 2rem;
 }
-colgroup #col-2{
-}
+
 table{
     border-collapse: collapse;
     border-radius: 1rem 1rem 0 0;
@@ -123,6 +122,7 @@ table,
     width: 100%;
     margin: auto;
 }
+
 tbody tr td:nth-child(2){
     color: var(--primary-color);
     font-weight: 500;
