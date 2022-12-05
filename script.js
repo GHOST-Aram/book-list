@@ -1,4 +1,5 @@
-
+//Create row with tr with tds
+//Return tr node
 function createRow(book, index){
     const tableRow = document.createElement('tr')
 
@@ -25,6 +26,8 @@ function createRow(book, index){
     return tableRow
 
 }
+//Creat book object using user input
+//Return book object
 function getBookProperties(){
     const bookTitle = document.querySelector('#book-title')
     const author = document.querySelector('#author-name')
@@ -37,7 +40,7 @@ function getBookProperties(){
             type:bookType.value}
     return book
 }
-
+//Render books in books array to table
 function renderBooks(books){
 
     const tbody = document.querySelector('tbody')
@@ -51,30 +54,42 @@ function renderBooks(books){
 
     
 }
+//Render book row, (tr)
 function renderRow(row){
     const table = document.querySelector('tbody')
     table.appendChild(row)
 }
-
+//Add Book to books array
+//Update local storage
 function updateBooks(book){
     books.push(book)
     const local = JSON.stringify(books)
     window.localStorage.setItem('local',local)
 }
+
+
+
+
 // Listing Begins
 let books = []
+
+//Check books in local storage
+//Render is books found in local storage
+//else create new local storage
 window.addEventListener('load',(e)=>{
     let local = JSON.parse(window.localStorage.getItem('local')) 
-    if(Array.isArray(local)){//Chck books in local storage
+    if(Array.isArray(local)){
         books = local
         renderBooks(books)   
     }
-    else{//Create local storage
+    else{
         local = JSON.stringify(books)
         window.localStorage.setItem('local', local)
     }
 
 })
+
+//Add book book list
 const form =  document.querySelector('form')
 form.addEventListener('submit', (event)=>{
     event.preventDefault()
