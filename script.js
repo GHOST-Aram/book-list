@@ -67,12 +67,12 @@ const form =  document.querySelector('form')
 
 console.log(form)
 
-let index = '#'
 
 form.addEventListener('submit', (event)=>{
     event.preventDefault()
     const book = getBookProperties()
     addToBooks(book)
+    let index = books.indexOf(book) + 1
     const row = createRow(book, index)
     renderRow(row)
 
