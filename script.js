@@ -49,7 +49,8 @@ function renderBooks(books){
     books.forEach(book => {
        let row = createRow(book, index)
        index++ 
-       tbody.appendChild(row)
+       if(book.title)
+            tbody.appendChild(row)
     });
 
     
