@@ -109,15 +109,19 @@ select option{
 }
 /* Table styles */
 colgroup #col-1{
-    width: 2rem;
+    width: 5%;
 }
+
 
 table{
     border-collapse: collapse;
     border-radius: 1rem 1rem 0 0;
     overflow: hidden;
 }
-table,
+table{
+    width: 80%;
+    margin: auto;
+}
 .table-section{
     width: 100%;
     margin: auto;
@@ -137,8 +141,11 @@ tbody tr td:nth-child(4){
     color: whitesmoke;
 }
 td{
-    max-width: 300px;
     text-transform: capitalize;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-inline: .5rem;
+    white-space: nowrap;
 }
 
 th{

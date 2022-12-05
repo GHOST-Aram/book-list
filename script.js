@@ -38,7 +38,6 @@ let index = '#'
 
 form.addEventListener('submit', (event)=>{
     event.preventDefault()
-    alert('submitting')
     const row = addToTable(index,bookTitle,author,ISBN,documentType)
     table.appendChild(row)
 })
