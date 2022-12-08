@@ -4,7 +4,7 @@ function createRow(book, index){
     const tableRow = document.createElement('tr')
 
     const count = document.createElement('th')
-    count.textContent = index
+    count.textContent = "#"+index
     tableRow.appendChild(count)
 
     const title = document.createElement('td')
@@ -46,11 +46,11 @@ function renderBooks(books){
     const tbody = document.querySelector('tbody')
     tbody.innerHTML = ''
     let index = 1
+    
     books.forEach(book => {
        let row = createRow(book, index)
        index++ 
-       if(book.title)
-            tbody.appendChild(row)
+        tbody.appendChild(row)
     });
 
     

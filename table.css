@@ -1,73 +1,102 @@
-colgroup #col-1{
-    width: 100px;
-}
-colgroup #col-2{
-    width: 100px;
+    caption{
+        color: white;
+        padding: 1rem;
+    }
+    /*  */
+
+
+    table{
+        border-collapse: collapse;
+        border-radius: 1rem 1rem 0 0;
+        overflow: hidden;
+    }
+    table{
+        width: 50%;
+        margin: auto;
+    }
+    .table-section{
+        width: 100%;
+        margin: auto;
+    }
+
+    tbody tr td:nth-child(2){
+        color: var(--primary-color);
+        font-weight: 500;
+    }
+    tbody tr td:nth-child(3){
+        color: orangered;
+    }
+    tbody tr td:last-of-type{
+        color: yellow;
+    }
+    tbody tr td:nth-child(4){
+        color: whitesmoke;
     
-}
-
-
-table{
-    border-collapse: collapse;
-    border-radius: 1rem 1rem 0 0;
-    overflow: hidden;
-}
-table{
-    width: 80%;
-    margin: auto;
-}
-.table-section{
-    width: 100%;
-    margin: auto;
-}
-
-tbody tr td:nth-child(2){
-    color: var(--primary-color);
-    font-weight: 500;
-}
-tbody tr td:nth-child(3){
-    color: orangered;
-}
-tbody tr td:last-of-type{
-    color: yellow;
-}
-tbody tr td:nth-child(4){
-    color: whitesmoke;
-}
-td{
-    text-transform: capitalize;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    padding-inline: .5rem;
-    white-space: nowrap;
-}
-
-th{
-    font-weight: 600;
-   text-align: left;
-   padding: 1rem .5rem;
-
-}
-thead{
+    }
+    /* //Indexing with css */
     
-   background-color: var(--primary-color);
-}
-thead th{
-   color: white;
-   border-bottom: 2px solid grey;
+    td{
+        text-transform: capitalize;
+        padding-inline: .5rem;
+    }
 
-}
-tr th:first-child{
-    color:white;
-    text-align: center;
+    th{
+        font-weight: 600;
+        text-align: left;
+        padding: 1rem .5rem;
 
-}
-tr{
-    border-bottom: solid 1px grey;
-}
-tr:nth-of-type(even){
-    background-color: rgba(0,0,0,0.4);
-}
-tr:last-of-type{
-    border-bottom: solid 2px var(--primary-color);
-}
+    }
+    thead{
+        
+    background-color: var(--primary-color);
+    }
+    thead th{
+    color: white;
+    border-bottom: 2px solid grey;
+
+    }
+    tbody tr th:first-child{
+        color:white;
+        text-align: center;
+
+    }
+    tr{
+        border-bottom: solid 1px grey;
+    }
+    tr:nth-of-type(even){
+        background-color: rgba(0,0,0,0.4);
+    }
+    tr:last-of-type{
+        border-bottom: solid 2px var(--primary-color);
+    }
+    @media only screen and (max-width:600px) {
+        
+        table{
+            width: 100%;
+            margin: auto;
+        }
+        thead{
+            position: absolute;
+            top: -99999px;
+            left: -99999px;
+        }
+        tbody tr th:first-of-type,
+        td{
+            display: block;
+            text-align: right;
+            display: flex;
+            gap: 100px;
+            justify-content: space-between;
+        }
+        td:nth-of-type(1)::before{content: 'Title';}
+        td:nth-of-type(2)::before{content: 'Author';}
+        td:nth-of-type(3)::before{content: 'ISBN';}
+        td:nth-of-type(4)::before{content: 'Document type';}
+
+    
+         tbody tr th:first-of-type::before{
+            content: 'Index';
+         }
+
+
+    }
