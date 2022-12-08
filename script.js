@@ -47,7 +47,8 @@ function renderBooks(books){
     tbody.innerHTML = ''
     let index = 1
     books = books.filter(book=>{
-        return book.title = true
+        if(book.title)
+            return book
     })
     books.forEach(book => {
        let row = createRow(book, index)
