@@ -46,7 +46,9 @@ function renderBooks(books){
     const tbody = document.querySelector('tbody')
     tbody.innerHTML = ''
     let index = 1
-    
+    books = books.filter(book=>{
+        return book.title = true
+    })
     books.forEach(book => {
        let row = createRow(book, index)
        index++ 
