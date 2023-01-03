@@ -99,10 +99,13 @@ const form =  document.querySelector('form')
 form.addEventListener('submit', (event)=>{
     event.preventDefault()
     const book = getBookProperties()
-    updateBooks(book)
-    let index = books.indexOf(book) + 1
-    const row = createRow(book, index)
-    renderRow(row)
+    if(book.title){
+        updateBooks(book)
+        let index = books.indexOf(book) + 1
+        const row = createRow(book, index)
+        renderRow(row)
+    }
+   
 })
 
 
